@@ -1,6 +1,7 @@
 package org.example;
 
 import curaHealth.CuraHealthObjects;
+import io.qameta.allure.Description;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,6 +13,8 @@ public class CuraHealthTest {
         cure.setup();
     }
     @Test(priority = 0)
+    @Description("Appointment Confirmation\n" +
+            "Please be informed that your appointment has been booked as following:")
     public void bookAppointment(){
         cure.makeAppointment();
     }

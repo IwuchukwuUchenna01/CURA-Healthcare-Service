@@ -21,6 +21,7 @@ public class CuraHealthObjects {
         driver.get(Selectors.siteurl);
         driver.manage().window().maximize();
     }
+    /*Test to verify the above site books appointment for  users successfully*/
     public void makeAppointment(){
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id(Selectors.makeAppointmentButton)));
         driver.findElement(By.id(Selectors.makeAppointmentButton)).click();
@@ -43,20 +44,15 @@ public class CuraHealthObjects {
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(Selectors.homePage)));
         driver.findElement(By.cssSelector(Selectors.homePage)).click();
     }
+    /*Logs User out after reservation or appointment has been booked */
     public void logout(){
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id(Selectors.hamburgerMenu)));
         driver.findElement(By.id(Selectors.hamburgerMenu)).click();
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id(Selectors.sidebar)));
         driver.findElement(By.cssSelector(Selectors.logoutButton)).click();
     }
+    /*tears down page after the whole process has been completed */
     public void dissolve(){
         driver.quit();
-    }
-    public static void  main(String [] args ){
-        CuraHealthObjects webDriver = new CuraHealthObjects();
-        webDriver.setup();
-        webDriver.makeAppointment();
-        webDriver.logout();
-        webDriver.dissolve();
     }
 }
