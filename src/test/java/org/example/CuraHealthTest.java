@@ -13,7 +13,7 @@ public class CuraHealthTest {
     public void openPage(){
         cure.setup();
     }
-    @Test(priority = 0)
+    @Test
     @Description("Appointment Confirmation\n" +
             "Please be informed that your appointment has been booked as following:\n"+
     "Facility:  " + "\t\t\tTokyo CURA Healthcare Center\n" +
@@ -31,10 +31,6 @@ public class CuraHealthTest {
             "\t\t\tthis is the date suitable for me")
     public void bookAppointment(){
         cure.makeAppointment();
-    }
-    @AfterMethod
-    @Description("Logs User out")
-    public void logout(){
         cure.logout();
     }
     @AfterTest
