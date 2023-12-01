@@ -40,3 +40,7 @@ build/
 ### intellij allure ###
 .idea
 allure-results
+
+### ignore irrelevant files###
+org
+
