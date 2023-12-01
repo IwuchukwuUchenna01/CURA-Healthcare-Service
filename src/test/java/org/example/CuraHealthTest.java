@@ -2,6 +2,7 @@ package org.example;
 
 import curaHealth.CuraHealthObjects;
 import io.qameta.allure.Description;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -31,7 +32,7 @@ public class CuraHealthTest {
     public void bookAppointment(){
         cure.makeAppointment();
     }
-    @Test(priority = 1)
+    @AfterMethod
     @Description("Logs User out")
     public void logout(){
         cure.logout();
