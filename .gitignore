@@ -43,4 +43,6 @@ allure-results
 
 ### ignore irrelevant files###
 org
+App.java
+
 
