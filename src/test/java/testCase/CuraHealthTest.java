@@ -1,4 +1,4 @@
-package org.example;
+package testCase;
 
 import curaHealth.CuraHealthObjects;
 import io.qameta.allure.Description;

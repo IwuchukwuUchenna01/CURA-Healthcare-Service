@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/Support/Desktop/cURAHealthcareService">
         <classes>
-            <class name="org.example.CuraHealthTest">
+            <class name="testCase.CuraHealthTest">
                 <methods>
                     <include name="bookAppointment"/>
                 </methods>
